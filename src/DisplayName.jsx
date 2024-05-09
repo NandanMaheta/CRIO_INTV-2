@@ -34,7 +34,7 @@ export default function DisplayName() {
                 <button type="submit">Submit</button>
             </form>
             
-            {submitted ? <p>Full Name: {name.first} {name.last}</p> : <p>Full Name:</p>}
+            {submitted && <p>Full Name: {name.first} {name.last}</p>}
         </>
     );
 }
