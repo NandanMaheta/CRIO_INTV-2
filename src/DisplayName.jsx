@@ -32,7 +32,7 @@ export default function DisplayName() {
                 
                 
                 <button type="submit">Submit</button>
-            </form>
+            </form> 
             
             {submitted && <p>Full Name: {name.first} {name.last}</p>}
         </>

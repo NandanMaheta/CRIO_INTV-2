@@ -1,3 +1,4 @@
+import Counter from "./Counter";
 import Countries from "./Countries"
 import DisplayName from "./DisplayName";
 import StopWatch from "./StopWatch";
@@ -7,7 +8,8 @@ function App() {
    <>
    {/* <Countries/> */}
    {/* <StopWatch/> */}
-   <DisplayName/>
+   {/* <DisplayName/> */}
+   <Counter/>
    </>
   );
 }
