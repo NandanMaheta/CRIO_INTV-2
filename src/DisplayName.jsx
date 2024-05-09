@@ -25,10 +25,11 @@ export default function DisplayName() {
             <h1>Full Name Display</h1>
             
             <form onSubmit={(e) => handleSubmit(e)} action="submit">
-                <span>First Name:</span>
-                <input type="text" name="first" value={name.first} onChange={(e) => handleChange(e)} required /> 
-                <span>Last Name:</span>
-                <input type="text" name="last" value={name.last} onChange={(e) => handleChange(e)} required />
+                <div><label htmlFor="first">First Name:</label>
+                <input type="text" name="first" value={name.first} onChange={(e) => handleChange(e)} required /> </div>
+                <div><label htmlFor="last">Last Name:</label>
+                <input type="text" name="last" value={name.last} onChange={(e) => handleChange(e)} required /></div>
+                
                 
                 <button type="submit">Submit</button>
             </form>
