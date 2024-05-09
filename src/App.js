@@ -1,4 +1,4 @@
-import Countries from "./Session1/Countries"
+import Countries from "./Countries"
 
 function App() {
   return (
