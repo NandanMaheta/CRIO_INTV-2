@@ -4,15 +4,12 @@ export default function StopWatch() {
   const [time, setTime] = useState(0);
   const [start, setStart] = useState(false);
 
-    
-const formatTime = (totalSeconds) => {
-    
+  const formatTime = (totalSeconds) => {
     const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
     const formattedTime = `${minutes < 10 ? "0" : ""}${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
     return formattedTime;
-};
-
+  };
 
   const handleStart = () => {
     setStart((prev) => !prev);
