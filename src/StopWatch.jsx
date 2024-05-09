@@ -7,9 +7,11 @@ export default function StopWatch() {
   const formatTime = (totalSeconds) => {
     const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
-    const formattedTime = `${minutes < 10 ? "0" : ""}${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-    return formattedTime;
+    const formattedMinutes = minutes < 1 ? "0" : minutes;
+    const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+    return `${formattedMinutes}:${formattedSeconds}`;
   };
+  
 
   const handleStart = () => {
     setStart((prev) => !prev);
@@ -37,10 +39,9 @@ export default function StopWatch() {
       <h1>Stopwatch</h1>
 
       <div>
-        <span>Time: </span>
-        <span>{formatTime(time)}</span>
+        <span>Time: {formatTime(time)} </span>
       </div>
-      <br />
+
       <button onClick={handleStart}>{start ? "Stop" : "Start"}</button>
       <button onClick={handleReset}>Reset</button>
     </>
