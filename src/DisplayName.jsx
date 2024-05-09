@@ -19,20 +19,20 @@ export default function DisplayName() {
         e.preventDefault();
         setSubmitted(true);
     }
-    
+
     return (
         <>
             <h1>Full Name Display</h1>
-            <br />
+            
             <form onSubmit={(e) => handleSubmit(e)} action="submit">
                 <span>First Name:</span>
-                <input type="text" name="first" value={name.first} onChange={(e) => handleChange(e)} required /> <br />
+                <input type="text" name="first" value={name.first} onChange={(e) => handleChange(e)} required /> 
                 <span>Last Name:</span>
                 <input type="text" name="last" value={name.last} onChange={(e) => handleChange(e)} required />
-                <br />
+                
                 <button type="submit">Submit</button>
             </form>
-            <br />
+            
             {submitted ? <p>Full Name: {name.first} {name.last}</p> : <p>Full Name:</p>}
         </>
     );
