@@ -17,7 +17,7 @@ export default function Countries() {
         setData(response.data);
       }
     } catch (e) {
-      alert(e);
+      console.log(e);
     } finally {
       setLoading(false);
     }
