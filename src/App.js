@@ -4,6 +4,7 @@ import Countries from "./Countries"
 import DisplayName from "./DisplayName";
 import StopWatch from "./StopWatch";
 import ClassCounter from "./ClassCounter"
+import Pagination from "./Pagination";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
    {/* <DisplayName/> */}
    {/* <Counter/> */}
    {/* <Calculator/> */}
-   <ClassCounter/>
+   {/* <ClassCounter/> */}
+   <Pagination/>
    </>
   );
 }
