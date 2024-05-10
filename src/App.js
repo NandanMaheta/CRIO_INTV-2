@@ -7,11 +7,11 @@ import StopWatch from "./StopWatch";
 function App() {
   return (
    <>
-   {/* <Countries/> */}
+   <Countries/>
    {/* <StopWatch/> */}
    {/* <DisplayName/> */}
    {/* <Counter/> */}
-   <Calculator/>
+   {/* <Calculator/> */}
    </>
   );
 }

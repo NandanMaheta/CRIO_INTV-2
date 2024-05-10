@@ -8,6 +8,7 @@ function Sklton() {
 export default function Countries() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("");
 
   const handleData = async () => {
     setLoading(true);
@@ -17,7 +18,7 @@ export default function Countries() {
         setData(response.data);
       }
     } catch (e) {
-      console.log(e);
+      console.error(e);
     } finally {
       setLoading(false);
     }
@@ -27,23 +28,38 @@ export default function Countries() {
     handleData();
   }, []);
 
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const filteredData = data.filter((item) =>
+    item.name.official.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <>
       {loading ? (
         <Sklton />
       ) : (
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {data &&
-            data.map((item, index) => (
+        <div style={{display:"flex", flexDirection:"column", alignItems:"center", }}>
+          <input
+            type="text"
+            name="inputBox"
+            onChange={(e) => handleChange(e)}
+            placeholder="Search for countries"
+            style={{width:"60vw", padding:"7px", marginBottom:"10px", borderRadius:"8px"}}
+          />
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            {filteredData.map((item, index) => (
               <div
                 key={index}
+                className="countryCard"
                 style={{
                   width: "190px",
                   height: "185px",
                   padding: "10px",
                   justifyContent: "center",
                   alignItems: "center",
-
                   border: "1px solid black",
                   borderRadius: "6px",
                   margin: "10px",
@@ -54,7 +70,6 @@ export default function Countries() {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
-
                     width: "100%",
                     height: "100%",
                     alignItems: "center",
@@ -69,6 +84,7 @@ export default function Countries() {
                 </div>
               </div>
             ))}
+          </div>
         </div>
       )}
     </>
