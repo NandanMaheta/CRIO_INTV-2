@@ -111,7 +111,7 @@ function EmployeePagination() {
         <button
           style={{
             padding: "10px 20px",
-            backgroundColor: "#4CAF50",
+            backgroundColor: "green",
             color: "white",
             border: "none",
             cursor: "pointer",
@@ -126,7 +126,7 @@ function EmployeePagination() {
         <button
           style={{
             padding: "10px 20px",
-            backgroundColor: "#4CAF50",
+            backgroundColor: "green",
             color: "white",
             border: "none",
             cursor: "pointer",
