@@ -33,7 +33,7 @@ export default function Countries() {
   };
 
   const filteredData = data.filter((item) =>
-    item.name.official.toLowerCase().includes(search.toLowerCase())
+    item.name.common.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -80,7 +80,7 @@ export default function Countries() {
                     alt="flag"
                     style={{ width: "120px", height: "120px" }}
                   />
-                  <h5 style={{ width: "140px" }}>{item.name.official}</h5>
+                  <h5 style={{ width: "140px" }}>{item.name.common}</h5>
                 </div>
               </div>
             ))}
