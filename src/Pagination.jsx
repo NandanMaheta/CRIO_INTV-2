@@ -24,7 +24,7 @@ function EmployeePagination() {
       setStaff(FilteredData);
       setTotal(Math.ceil(data.length / 10));
     } catch (error) {
-      alert("Failed to fetch the data");
+      alert("Failed to fetch data");
     }
   };
 
